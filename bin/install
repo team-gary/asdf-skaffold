@@ -19,7 +19,7 @@ install_skaffold() {
 
   local bin_path="${bin_install_path}/skaffold"
   echo "Downloading skaffold from ${download_url}"
-  curl -s "$download_url" -o "$bin_path"
+  curl -sSL "$download_url" -o "$bin_path"
   chmod +x $bin_path
 }
 
@@ -30,7 +30,7 @@ get_arch() {
 get_download_url() {
   local version="$1"
   local platform="$(get_arch)"
-  echo "https://storage.googleapis.com/skaffold/release/v${version}/bin/${platform}/amd64/skaffold"
+  echo "https://storage.googleapis.com/skaffold/releases/v${version}/skaffold-${platform}-amd64"
 }
 
 install_skaffold $ASDF_INSTALL_TYPE $ASDF_INSTALL_VERSION $ASDF_INSTALL_PATH
