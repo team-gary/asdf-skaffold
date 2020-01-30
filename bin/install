@@ -46,7 +46,9 @@ install_skaffold() {
 	local tempdir=$(my_mktemp $platform)
   local download_url="$(get_download_url $version $platform)"
 
-	curl -sSL "$download_url" -o "${install_path}/bin/skaffold"
+	curl $download_url -o "${tempdir}/skaffold"
+	mv "${tempdir}/skaffold" "${install_path}/bin"
+	rm -rf "${tempdir}"
 }
 
 install_skaffold $ASDF_INSTALL_TYPE $ASDF_INSTALL_VERSION $ASDF_INSTALL_PATH
