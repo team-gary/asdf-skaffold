@@ -48,6 +48,7 @@ install_skaffold() {
 
 	curl $download_url -o "${tempdir}/skaffold"
 	mv "${tempdir}/skaffold" "${install_path}/bin"
+	chmod +x "${install_path}/bin/skaffold"
 	rm -rf "${tempdir}"
 }
 
