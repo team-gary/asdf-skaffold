@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-set -e
 set -o pipefail
 
 RELEASES_URL="https://api.github.com/repos/GoogleContainerTools/skaffold/releases"
