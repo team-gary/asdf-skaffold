@@ -1,4 +1,4 @@
-![Build Status](https://github.com/team-gary/asdf-skaffold/workflows/CI/badge.svg)
+![CI](https://github.com/team-gary/asdf-skaffold/workflows/CI/badge.svg)
 
 # asdf-skaffold
 Skaffold plugin for [asdf](https://github.com/asdf-vm/asdf) version manager
