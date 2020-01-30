@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
+set -eu
+set -o pipefail
+
 RELEASES_URL="https://api.github.com/repos/GoogleContainerTools/skaffold/releases"
 CMD="curl -s"
-if [ -n "$OAUTH_TOKEN" ]; then
+if [ -n "$OAUTH_TOKEN" ]a; then
   CMD="$CMD -H 'Authorization: token $OAUTH_TOKEN'"
 fi
 CMD="$CMD $RELEASES_URL"
