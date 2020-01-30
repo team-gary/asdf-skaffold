@@ -34,8 +34,10 @@ install_skaffold() {
   local install_path=$3
   local platform=$(get_platform)
   local download_url="$(get_download_url $version $platform)"
+	local bin_install_path="$install_path/bin"
 
-	curl -sSL $download_url -o "${install_path}"
+	curl -sSL "$download_url" -o "$bin_install_path"
+	chmod +x $bin_install_path
 }
 
 install_skaffold $ASDF_INSTALL_TYPE $ASDF_INSTALL_VERSION $ASDF_INSTALL_PATH
