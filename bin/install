@@ -47,12 +47,15 @@ install_skaffold() {
   local bin_install_path="$install_path/bin"
   local download_url="$(get_download_url $version)"
 
-  mkdir -p "${bin_install_path}"
+	curl -sSL $download_url -o "${tempdir}/archive.tar.gz"
 
-  local bin_path="${bin_install_path}/skaffold"
-  echo "Downloading skaffold from ${download_url}"
-  curl -sSL "$download_url" -o "$bin_path"
-  chmod +x $bin_path
+	tar -C "$install_path" -xzf "${tempdir}/archive.tar.gz"
+
+	rm -rf "${tempdir}"
+
+	echo "$install_type"
+	echo "$version"
+	echo "$install_path"
 }
 
 install_skaffold $ASDF_INSTALL_TYPE $ASDF_INSTALL_VERSION $ASDF_INSTALL_PATH
