@@ -2,8 +2,8 @@
 
 RELEASES_URL="https://api.github.com/repos/GoogleContainerTools/skaffold/releases"
 CMD="curl -s"
-if [ -n "$OAUTH_TOKEN" ]; then
-  CMD="$CMD -H 'Authorization: token $OAUTH_TOKEN'"
+if [ -n "$GITHUB_API_TOKEN" ]; then
+  CMD="$CMD -H 'Authorization: token $GITHUB_API_TOKEN'"
 fi
 CMD="$CMD $RELEASES_URL"
 
