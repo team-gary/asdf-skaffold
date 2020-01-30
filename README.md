@@ -1,7 +1,6 @@
+![Build Status](https://github.com/team-gary/asdf-skaffold/workflows/CI/badge.svg)
+
 # asdf-skaffold
-
-[![Build Status](https://travis-ci.org/kristoflemmens/asdf-skaffold.svg?branch=master)](https://travis-ci.org/kristoflemmens/asdf-skaffold)
-
 Skaffold plugin for [asdf](https://github.com/asdf-vm/asdf) version manager
 
 ## Install
@@ -16,4 +15,7 @@ Check out the [asdf](https://github.com/asdf-vm/asdf) readme for instructions on
 
 ## Credits
 
-All credits to https://github.com/Banno/asdf-kubectl
+All credits to https://github.com/kristoflemmens/asdf-skaffold.git
+
+## License
+MIT License
